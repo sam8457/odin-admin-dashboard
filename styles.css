@@ -1,3 +1,7 @@
+:root {
+    --blue: rgb(25,146,212);
+    --offwhite: rgb(226,232,240);
+}
 
 * {
     /* border: 1px dotted red; */
@@ -31,7 +35,7 @@ body {
 
 /* ##### SIDEBAR ##### */
 .sidebar {
-    background-color: rgb(25,146,212);
+    background-color: var(--blue);
     color: white;
     grid-area: sidebar;
 }
@@ -70,7 +74,8 @@ body {
     grid-template-columns: 1fr 10fr;
     gap: 0.5em;
     align-items: center;
-    justify-items: start;
+    /* justify-items: start; */
+    justify-content: start;
 }
 
 .alin img {
@@ -84,12 +89,108 @@ body {
     background-color: white;
     grid-area: titlebar;
     box-shadow: 0px 0px 10px 0px gray;
+    display: grid;
+    grid-template-areas: 
+        "search notify"
+        "name buttons"
+    ;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
+    gap: 2em;
+    align-content: space-between;
+    justify-content: space-between;
+    padding: 1em;
+    padding-bottom: 10em;
 }
 
+.search {
+    grid-area: search;
+    
+}
 
+.search input[type="text"] {
+    border: none;
+    background-color: var(--offwhite);
+    border-radius: 1em;
+    height: 1.8em;
+    padding: 0 1em;
+    /* width: 130%; */
+}
+
+.notify {
+    grid-area: notify;
+ 
+    font-weight: bold;
+
+    display: inline-grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto auto auto;
+    gap: 0.5em;
+    align-items: center;
+    justify-items: end;
+    justify-content: end;
+}
+
+.profile {
+    height: 2em;
+    border-radius: 1em;
+    width: auto;
+}
+
+.name {
+    grid-area: name;
+
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: start;
+    gap: 1em
+}
+
+.name p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+#user-name {
+    font-size: 1.5em;
+}
+
+.profile-big {
+    height: 4em;
+    border-radius: 10em;
+    width: auto;
+}
+
+.buttons {
+    grid-area: buttons;
+
+    display: inline-grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto auto auto;
+    gap: 0.5em;
+    align-items: center;
+    justify-items: end;
+    justify-content: end;
+
+}
+
+.buttons input[type="button"] {
+    border-radius: 10em;
+    padding: 0.5em 1em;
+    margin-left: 0.5em;
+    width: 5em;
+
+    background-color: var(--blue);
+    color: white;
+    border-style: none;
+    font-size: 1em;
+}
 
 /* ##### MAIN CONTENT ##### */
 .main {
-    background-color: rgb(226,232,240);
+    background-color: var(--offwhite);
     grid-area: main;
 }
