@@ -112,6 +112,9 @@ body {
 .search {
     grid-area: search;
     
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto 1fr;
 }
 
 .search input[type="text"] {
@@ -211,6 +214,7 @@ body {
 
     padding: 1em;
     padding-top: 2em;
+    padding-bottom: 3em;
 
     display: grid;
     grid-template-areas: 
