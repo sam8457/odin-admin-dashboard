@@ -218,6 +218,7 @@ body {
         "projects trending"
     ;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr;
     gap: 2em;
 
     align-items: baseline;
@@ -296,4 +297,32 @@ body {
 /* TRENDING */
 .trending {
     grid-area: trending;
+}
+
+.trending * * {
+    font-size: 1em;
+}
+
+.trending h4 {
+    padding-top: 0em;
+    margin-top: 0em;
+}
+
+.trending-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.card .user-at {
+    color: black;
+}
+
+.trending .card p {
+    margin: 0;
+    padding: 0;
+}
+
+.trending .card img {
+    height: 2em;
 }
